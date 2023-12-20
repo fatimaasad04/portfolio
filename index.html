@@ -33,27 +33,28 @@
                     <img src="images/download (2).jpeg">
                 </div>
                 <div class="about-col-2">
-                    <h1>About Me</h1>
+                    <h1 class="sub-title">About Me</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo maiores perspiciatis quis. Aperiam dignissimos minus asperiores beatae repellat omnis iure, magni fugiat ipsa sed totam quasi veniam earum praesentium!
                     </p>
                     <div class="tab-tittles">
-                        <p class="tab-links active-link" onclick=" opentab('skills')">Skills</p>
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                         <p class="tab-links" onclick="opentab('experience')">Experience</p>
                         <p class="tab-links" onclick="opentab('education')">Education</p>
+
                     </div>
-                    <div class="tab-content active-tab " id="skilla">
+                    <div class="tab-contents active-tab " id="skills">
                         <ul>
                             <li><span>UI/UX</span><br>Designing Web/APP interface</li>
                               <li><span>Web Development</span><br> Web App Development</li>
                             <li><span>App Development</span><br>Building andriods</li>
                         </ul>
-                    </div> <div class="tab-content"  id="experience">
+                    </div> <div class="tab-contents"  id="experience">
                         <ul>
                             <li><span>2021</span><br>UI/UX Design Training at institute</li>
                               <li><span>2019-2021</span><br> Web App Development</li>
                             <li><span>2017-19</span><br>Building andriods</li>
                         </ul>
-                    </div> <div class="tab-content" id="education">
+                    </div> <div class="tab-contents" id="education">
                         <ul>
                             <li><span>2018</span><br>matric from Ali Public</li>
                               <li><span>2020</span><br> FSc from UGI</li>
@@ -65,18 +66,43 @@
         </div>
     </div>
 </div>
+    <!-- ----------sevices---------->
+    <div id="services">
+        <div class="container">
+        <div>
+            <h1 class="sub-titles">My Services</h1>
+        </div>
+            <div class="services-list">
+            <div>
+                <h2>Web Design</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit, in.</p>
+                <a href="#">learn more</a>
+            </div>
+            <div>
+                <h2>UI/UX Design</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit, in.</p>
+                <a href="#">learn more</a>
+            </div>
+            <div>
+                <h2>App Design</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit, in.</p>
+                <a href="#">learn more</a>
+            </div>
+        </div>
+    </div>
+    </div>
 <script>
     var tablinks = document.getElementsByClassName("tab-links");
     var tabcontents = document.getElementsByClassName("tab-contents");
-    function opentab(tabname){
-        for(tablink of tablinks){
-            tab.link.classlist.remove("active-link");
+    function opentab(tabname ){
+        for( tablink of tablinks){
+            tablink.classList.remove("active-link");
         }
-        for(tabcontents of tabcontents){
-            tab.contents.classlist.remove("active-tab");
+        for( tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
         }
-        event.currenttarget.classlist.add("active-link");
-        document.getElementById(tabname).classlist
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
     }
 
 
